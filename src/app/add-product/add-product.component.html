@@ -1,0 +1,27 @@
+<form [formGroup] ="Addproduct" >
+    <div class ="form-group" >
+        <label for ="title_name"> Image Title</label>
+        <input class="form-control" id="title_name"type = "text"  formControlName = "title_name"  required>
+     
+    </div>
+    <div class="form-group" >
+        <label for ="image_url"> Image Url</label>
+        <input  class="form-control" id="image_url"type = "text"  formControlName = "image_url"required >
+     
+    </div>
+    <div  class="form-group">
+        <label for ="description"> Image Description</label>
+        <textarea name="description" type= "text" class="form-control" id="description" cols= "15" rows = "6"  formControlName ="description" required ></textarea>
+     
+    </div>
+    
+
+
+    <div class="form-group">
+        <button class = " btn btn-primary" [disabled] = "!Addproduct.valid" (click)= onSubmit()>SUBMIT</button>
+    </div>
+
+    
+    </form>
+
+   
