@@ -35,17 +35,16 @@ export class AddProductComponent implements OnInit {
       var body ={
         "title": this.Addproduct.value.title_name ,
         "imageUrl": this.Addproduct.value.image_url,
-         "description":this.Addproduct.value.description 
+        "description":this.Addproduct.value.description 
       } ;
-      // this.ProductService.postProductDetails(body);
-      this.ProductService.postProductDetails(this.Addproduct.value).subscribe(res=>{console.log(res)});
+      this.ProductService.postProductDetails(body);
+     // this.ProductService.postProductDetails(this.Addproduct.value).subscribe(res=>{console.log(res)});
 
       this.router.navigate (['']);
      
-      setTimeout(
-        function(){ 
-        location.reload(); 
-        }, 1000);
+      setTimeout( ()=>{ location.reload()}, 1000);
+       
+   
       
     }
 

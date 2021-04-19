@@ -32,7 +32,7 @@ export class ProductListingComponent implements OnInit {
       var a= confirm("Do You really want to delete");
       
        if( a== true){ 
-              this.isDelete[id]  = true;
+              this.isDelete[id]=true;
                this.ProductService.deleteProduct(id)
                                 .subscribe({
                                   next: data => {
@@ -40,13 +40,10 @@ export class ProductListingComponent implements OnInit {
                                   },
                                   error: error => {
                                       this.errorMessage = error.message;
-                                      console.error('There was an error!', error);
+                                      console.error('There was an error!',error);
                                   }
                               });
-               setTimeout(()=>{location.reload()}, 1000);
-               
-              
-              
+               setTimeout(()=>{location.reload()}, 1000);  
    
        }
        
